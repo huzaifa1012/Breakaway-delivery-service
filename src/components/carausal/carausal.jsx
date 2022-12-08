@@ -1,15 +1,16 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./carausal.css";
+import adBanner from "./banner.png"
 function Carausal() {
   return (
 
     <Carousel className='mainCarausal'>
       <Carousel.Item>
-        <a href="https://www.youtube.com">
+        <a href="#">
         <img
         className="d-block w-100"
-        src="https://www.loudmedia.com.au/wp-content/uploads/2016/12/banner-1000x350-one-way-vision.jpg"
+        src={adBanner}
         alt="First slide"
         
         />
@@ -22,7 +23,7 @@ function Carausal() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.anytimeexpress.in/wp-content/uploads/2021/03/Air-Cargo-Agents.jpg"
+          src={adBanner}
           alt="Second slide"
         />
 
@@ -34,7 +35,7 @@ function Carausal() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://static.commerceplatform.services/images/vinyl-vs-fabric-which-banner-material-is-better.jpg"
+          src={adBanner}
           alt="Third slide"
         />
 

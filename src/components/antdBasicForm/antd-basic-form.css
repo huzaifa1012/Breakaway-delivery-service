@@ -1,0 +1,143 @@
+.form-antdwrap-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;;
+  flex-wrap: wrap;
+}
+.left-of-form {
+  width: 40%;
+  padding: 20px;
+}
+
+.main-form {
+  /* width: 30%; */
+  padding-top: 50px;
+  align-items: center;
+}
+.ant-row {
+  display: flex;
+  justify-content: center;
+  width: 120%;
+}
+
+.h1-of-order {
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+}
+.p-of-order {
+  color: white;
+}
+.main-hero-gif {
+  width: 250px;
+  padding: 10px;
+  transform: rotateY(180deg);
+  vertical-align: bottom;
+}
+.form-right {
+    /* border: 2px solid  green; */
+}
+.ant-row.ant-form-item-row.css-dev-only-do-not-override-1ij74fp{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+}
+.form-antdwrap {
+  width: 100vw;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(0%2c 125%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c535.589C99.495%2c530.951%2c177.469%2c459.147%2c266.913%2c415.324C370.049%2c364.793%2c523.909%2c365.329%2c565.784%2c258.385C608.233%2c149.974%2c478.497%2c48.62%2c455.161%2c-65.442C433.837%2c-169.667%2c504.157%2c-296.104%2c435.683%2c-377.522C367.337%2c-458.788%2c235.76%2c-426.951%2c132.031%2c-449.655C37.011%2c-470.453%2c-51.404%2c-512.805%2c-148.388%2c-505.362C-261.497%2c-496.681%2c-385.235%2c-483.459%2c-465.966%2c-403.762C-548.13%2c-322.65%2c-572.084%2c-198.245%2c-576.362%2c-82.868C-580.376%2c25.4%2c-542.101%2c128.86%2c-489.219%2c223.419C-439.485%2c312.35%2c-369.296%2c386.169%2c-283.4%2c440.979C-197.708%2c495.659%2c-101.541%2c540.323%2c0%2c535.589' fill='%230064cc'%3e%3c/path%3e%3cpath d='M1440 1190.357C1556.429 1191.585 1647.976 1098.8429999999998 1743.613 1032.43 1835.863 968.369 1932.772 908.0989999999999 1987.607 810.0840000000001 2045.087 707.342 2092.074 583.768 2057.593 471.203 2023.824 360.96299999999997 1902.025 309.769 1812.205 237.48200000000003 1738.55 178.204 1666.72 121.75400000000002 1579.137 86.14299999999997 1483.326 47.18700000000001 1381.016-7.982999999999947 1282.001 21.90599999999995 1183.086 51.764999999999986 1132.211 156.942 1070.377 239.72000000000003 1012.86 316.717 945.075 391.791 934.355 487.299 923.764 581.6610000000001 978.5889999999999 666.539 1012.518 755.2239999999999 1048.934 850.4100000000001 1069.0529999999999 953.369 1140.475 1026.069 1221.9279999999999 1108.98 1323.778 1189.1309999999999 1440 1190.357' fill='%233397ff'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ant-input.css-dev-only-do-not-override-1ij74fp {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.384);
+  width: 100%;
+}
+/*  */
+.ant-form.ant-form-horizontal.css-dev-only-do-not-override-1ij74fp.main-form {
+    width: 500px;
+    /* border: 1px solid red; Box border */
+}
+
+.ant-form-item.css-dev-only-do-not-override-1ij74fp {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+
+
+/* button  */
+.hero-button {
+  display: flex;;
+}
+.helpline-btn {
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: rgba(0, 78, 201, 0.8239670868347339);
+  color: white;
+  border: 2px solid white;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+
+  align-items: center;
+}
+.helpline-btn:hover {
+  background-color: rgba(0, 125, 255, 1);
+}
+.whatsapp-btn {
+  margin: 2px;
+  background-color: rgba(0, 228, 0, 0.884);
+  /* background-color: transparent; */
+  border: none;
+  transition: 0.4s;
+  /* border: 2px solid rgba(39, 255, 39, 0.815); */
+  color: white;
+  /* text-shadow: 1px 1px 4px black; */
+  border-radius: 3px;
+  padding: 10px;
+  width: 120px;
+}
+.whatsapp-btn:hover {
+  background-color: rgb(36, 216, 0);
+}
+
+
+
+@media (min-width:100px) and (max-width: 768px) {
+
+    .ant-form.ant-form-horizontal.css-dev-only-do-not-override-1ij74fp.main-form {
+        width: 100vw;
+        /* border: 1px solid red; */
+    }
+
+    .ant-row {
+        display:  flex;
+        padding: 10px;
+        justify-content: center;
+        width: 100%;
+      }
+    .left-of-form {
+        width: 100%;
+        padding: 20px;
+      }
+      .ant-input.css-dev-only-do-not-override-1ij74fp {
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.384);
+        width: 100%;
+      }
+
+}
+

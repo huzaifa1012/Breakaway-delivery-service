@@ -7,16 +7,18 @@ import Header01 from './components/navbar/navbar';
 import Rout from './components/rout/rout';
 import Carausal from './components/carausal/carausal';
 import Categories from './components/categories/categories';
-import { Cards } from './components/CardsSection/cards';
+// import SimplOrderForm from "./components/basic order form/basicorder"
+ 
+import FormDisabledDemo from "./components/antdBasicForm/basicForm"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <>
-    {/* <Header/> */}
     <Header01/>
     <Carausal/>
-    <Categories/>
-    <Cards/>
-    
+    {/* <SimplOrderForm/> */}
+    {/* </> */}
+     <FormDisabledDemo/>
     {/* <Rout/> */}
 
 </>

@@ -7,6 +7,7 @@ const FileMax3 = () => (
   
     direction="vertical"
     style={{
+
       width: '100%',
     }}
     size="large"
@@ -21,6 +22,7 @@ const FileMax3 = () => (
     >
       <Button 
       style={{
+        
         color: 'Black',
         background: '#abcdef',
         width: '100%',

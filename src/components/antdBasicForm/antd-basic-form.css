@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;;
+  padding: 20px;
   flex-wrap: wrap;
 }
 .left-of-form {
@@ -35,13 +35,9 @@
   transform: rotateY(180deg);
   vertical-align: bottom;
 }
-.form-right {
-    /* border: 2px solid  green; */
-}
-.ant-row.ant-form-item-row.css-dev-only-do-not-override-1ij74fp{
-    /* width: 100%; */
-    display: flex;
-    justify-content: center;
+.ant-row.ant-form-item-row.css-dev-only-do-not-override-1ij74fp {
+  display: flex;
+  justify-content: center;
 }
 .form-antdwrap {
   width: 100vw;
@@ -53,6 +49,8 @@
 
 .ant-input.css-dev-only-do-not-override-1ij74fp {
   padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.384);
@@ -60,24 +58,21 @@
 }
 /*  */
 .ant-form.ant-form-horizontal.css-dev-only-do-not-override-1ij74fp.main-form {
-    width: 500px;
-    /* border: 1px solid red; Box border */
+  width: 500px;
 }
 
 .ant-form-item.css-dev-only-do-not-override-1ij74fp {
-    margin: 0;
-    padding: 0;
-    color: rgba(0, 0, 0, 0.88);
-    font-size: 14px;
-    margin-bottom: 15px;
-    vertical-align: top;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  margin-bottom: 15px;
+  vertical-align: top;
 }
-
-
 
 /* button  */
 .hero-button {
-  display: flex;;
+  display: flex;
 }
 .helpline-btn {
   margin: 2px;
@@ -91,7 +86,6 @@
   display: flex;
   justify-content: center;
   transition: 0.4s;
-
   align-items: center;
 }
 .helpline-btn:hover {
@@ -99,11 +93,11 @@
 }
 .whatsapp-btn {
   margin: 2px;
-  background-color: rgba(0, 228, 0, 0.884);
+  background-color: rgba(0, 194, 0, 0.884);
   /* background-color: transparent; */
   border: none;
   transition: 0.4s;
-  /* border: 2px solid rgba(39, 255, 39, 0.815); */
+  border: 2px solid white;
   color: white;
   /* text-shadow: 1px 1px 4px black; */
   border-radius: 3px;
@@ -114,30 +108,33 @@
   background-color: rgb(36, 216, 0);
 }
 
-
-
-@media (min-width:100px) and (max-width: 768px) {
-
-    .ant-form.ant-form-horizontal.css-dev-only-do-not-override-1ij74fp.main-form {
-        width: 100vw;
-        /* border: 1px solid red; */
-    }
-
-    .ant-row {
-        display:  flex;
-        padding: 10px;
-        justify-content: center;
-        width: 100%;
-      }
-    .left-of-form {
-        width: 100%;
-        padding: 20px;
-      }
-      .ant-input.css-dev-only-do-not-override-1ij74fp {
-        padding: 12px;
-        background-color: rgba(255, 255, 255, 0.384);
-        width: 100%;
-      }
-
+.ant-input.css-dev-only-do-not-override-1ij74fp::placeholder {
+  color: rgba(255, 255, 255, 0.555);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.123);
 }
 
+@media (min-width: 100px) and (max-width: 768px) {
+  .ant-form.ant-form-horizontal.css-dev-only-do-not-override-1ij74fp.main-form {
+    width: 100vw;
+    /* border: 1px solid red; */
+  }
+
+  .ant-row {
+    display: flex;
+    padding: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    justify-content: center;
+    width: 100%;
+  }
+  .left-of-form {
+    width: 100%;
+    padding: 20px;
+  }
+  .ant-input.css-dev-only-do-not-override-1ij74fp {
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 100%;
+  }
+}

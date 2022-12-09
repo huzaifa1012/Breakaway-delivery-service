@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { app, db } from "../firebaseconfig";
+import { collection, addDoc } from "firebase/firestore";
 import { PlusOutlined } from "@ant-design/icons";
-import FileMax3 from "../Upload max3/fileupload"
+import FileMax3 from "../Upload max3/fileupload";
 import "./antd-basic-form.css";
-import carGif from "./Media/resized car.gif"
+import carGif from "./Media/resized car.gif";
 
 import {
   Form,
@@ -11,18 +13,37 @@ import {
   Radio,
   Select,
   Cascader,
-  DatePicker,
   InputNumber,
   TreeSelect,
   Switch,
   Checkbox,
   Upload,
 } from "antd";
-import { useHref } from "react-router-dom";
-const { RangePicker } = DatePicker;
+
 const { TextArea } = Input;
 const FormDisabledDemo = () => {
+  // All
+  const [nameOfOrderPerson, setName] = useState("");
+  const [email, getEmail] = useState("");
+  const [phone, getPhone] = useState("");
+  const [pickHere, getPickHere] = useState("");
+  const [dropkHere, getDropkHere] = useState("");
+  const [detail, getDetail] = useState("");
+
   const [componentDisabled, setComponentDisabled] = useState(false);
+  const addOrderPersonData = async () => {
+    const docRef = await addDoc(collection(db, "publicOrders"), {
+      Name: nameOfOrderPerson,
+      Email: email,
+      Phone: phone,
+      Pick: pickHere,
+      Drop: dropkHere,
+      AdditionalDetail: detail,
+    });
+    console.log("Document written with ID: ", docRef.id);
+
+    return console.log(nameOfOrderPerson,email,phone,pickHere,dropkHere,detail);
+  };
   const onFormLayoutChange = ({ disabled }) => {
     setComponentDisabled(disabled);
   };
@@ -38,79 +59,87 @@ const FormDisabledDemo = () => {
               animi expedita iste unde nostrum quasi, accusamus mollitia eos at
               tempore veritatis.
             </p>
-            <img src={carGif}  alt="Delivery Car" className="main-hero-gif" /><br />
+            <img src={carGif} alt="Delivery Car" className="main-hero-gif" />
+            <br />
             <div className="hero-button">
-            <button className="helpline-btn">HELPLINE</button>
-            <button className="whatsapp-btn">WHATSAPP</button>
+              <button className="helpline-btn">HELPLINE</button>
+              <button className="whatsapp-btn">WHATSAPP</button>
             </div>
           </div>
-          <div className="form-right">
-          <Form
-            className="main-form"
-            labelCol={{
+          <div className="form-right w3-animate-right">
+            <Form
+              className="main-form"
+              labelCol={{
                 span: 4,
-            }}
-            wrapperCol={{
+              }}
+              wrapperCol={{
                 span: 14,
-            }}
-            layout="horizontal"
-            onValuesChange={onFormLayoutChange}
-            disabled={componentDisabled}
-          >
-            {/* <Form.Item label="Radio">
-              <Radio.Group>
-              <Radio value="apple"> Apple </Radio>
-              <Radio value="pear"> Pear </Radio>
-              </Radio.Group>
-            </Form.Item> */}
+              }}
+              layout="horizontal"
+              onValuesChange={onFormLayoutChange}
+              disabled={componentDisabled}
+            >
+              <Form.Item>
+                <Input
+                  placeholder="Your Name"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+              </Form.Item>
 
-            <Form.Item  >
-              <Input placeholder="Your Name" />
-            </Form.Item>
+              <Form.Item>
+                <Input placeholder="Your Email"  onChange={(e) => {
+                    getEmail(e.target.value);
+                  }} />
+              </Form.Item>
 
-            <Form.Item  >
-              <Input placeholder="Your Name" />
-            </Form.Item>
+              <Form.Item>
+                <Input placeholder="Phone / Whatsapp"  onChange={(e) => {
+                    getPhone(e.target.value);
+                  }} />
+              </Form.Item>
 
-            <Form.Item >
-              <Input placeholder="Phone / Whatsapp" />
-            </Form.Item>
+              <Form.Item>
+                <Input placeholder="Apartment 0123/ Street/ City/ state"  onChange={(e) => {
+                    getPickHere(e.target.value);
+                  }}   />
+              </Form.Item>
 
-            <Form.Item >
-              <Input placeholder="Apartment 0123/ Street/ City/ state" />
-            </Form.Item>
-            
-            <Form.Item >
-              <Input placeholder="Apartment 0123/ Street/ City/ state" />
-            </Form.Item>
+              <Form.Item>
+                <Input placeholder="Apartment 0123/ Street/ City/ state"  onChange={(e) => {
+                    getDropkHere(e.target.value);
+                  }}   />
+              </Form.Item>
 
-            {/* <Form.Item >
-          <DatePicker />
-        </Form.Item>
-        <Form.Item >
-          <RangePicker />
-        </Form.Item>
-        <Form.Item >
-          <InputNumber />
-        </Form.Item> */}
-            <Form.Item >
-              <TextArea rows={3}  placeholder="(Optional) Adiitional Details "/>
-            </Form.Item>
-            {/* <Form.Item  valuePropName="checked">
+                
+              <Form.Item>
+                <TextArea
+                  rows={3}
+                  placeholder="(Optional) Adiitional Details "
+                  onChange={(e) => {
+                    getDetail(e.target.value);
+                  }
+                } 
+                />
+              </Form.Item>
+              {/* <Form.Item  valuePropName="checked">
               <Switch />
             </Form.Item> */}
-            <Form.Item  valuePropName="fileList">
-            
-            {/* Coming from component */}
-            <FileMax3/>
-
-
-            </Form.Item>
-            <Form.Item  className="submit-but">
-              <Button>Submit Order</Button>
-            </Form.Item>
-          </Form>
-
+              <Form.Item valuePropName="fileList" className="buton-ofform-botom">
+                {/* Coming from component */}
+                <FileMax3   />
+              </Form.Item>
+              <Form.Item className="submit-but">
+                <Button className="buton-ofform-botom"
+                  onClick={() => {
+                    addOrderPersonData();
+                  }}
+                >
+                  Submit Order
+                </Button>
+              </Form.Item>
+            </Form>
           </div>
         </div>
       </div>

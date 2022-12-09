@@ -161,13 +161,15 @@
        </Container>
        <div className="heasder2 w3-animate-right">
        <Navbar.Collapse id="responsive-navbar-nav" className='nav-left-options'>
-           <Nav className="me-auto">
-             <Nav.Link > Home </Nav.Link>
-             <Nav.Link href="#">Contact</Nav.Link>
+           <Nav className="me-auto" >
+             <Nav.Link> <a href="https://mdbootstrap.com/docs/react/getting-started/installation/" className="navbar-links"> Home </a> </Nav.Link>
+             <Nav.Link href="#"> <a href=""  className="navbar-links"> Contact  </a> </Nav.Link>
            <Nav>
-             <Nav.Link href="#deets">Complain</Nav.Link>
+             <Nav.Link href="#"> <a href=""  className="navbar-links"> Complain  </a> </Nav.Link>
              <Nav.Link eventKey={2} href="#memes">
+             <a href=""  className="navbar-links">
                About
+               </a>
              </Nav.Link>
            </Nav>
 

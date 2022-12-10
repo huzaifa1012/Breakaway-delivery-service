@@ -15,7 +15,7 @@ export default function Hero() {
               fuga aperiam commodi excepturi aliquam magni!
             </p>
               <span className="importedbtn">
-                <a href="hero-wrap"></a>
+                <a href="#form-button-test"></a>
               </span>
   
 

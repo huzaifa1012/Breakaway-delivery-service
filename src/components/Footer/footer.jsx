@@ -16,9 +16,11 @@ export default function Footer() {
           </div>
           <div className="left-details-footer every-footer-box address">
             <h3>Office</h3>
-            <p>Abu Dhabi/ none/ #123/ street 31 .</p>
+            <p class='far fa-building'>  Abu Dhabi/ none/ #123/ street br address.</p>
+            <br />
             <p class='fas'> &#xf095; +021 21 314 22</p>
-            <p>Breakaway@gmail.com</p>
+            <br />
+            <p class="glyphicon"> &#x2709; Breakaway@gmail.com</p>
           </div>
 
           <div className="center-social-footer every-footer-box bottom2">

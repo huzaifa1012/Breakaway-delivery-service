@@ -147,7 +147,34 @@
  import Logo from './indexwhite.png'
  import "./nav.css"
  import { Link } from 'react-router-dom';
+//  SweetAlert
+ import Swal from 'sweetalert2'
+ import 'animate.css';
+import Company from '../CompanySection/company';
+//  
+
+// import Hero from "../heroSection/hero"
  function Header() {
+
+  function GoToCompany(){
+    // const ThisForComp =()=>{
+
+    //    Swal.fire({
+    //     title: 'This Section Is Only For Contracters & Companies',
+    //     showClass: {
+    //       popup: 'animate__animated animate__fadeInDown'
+    //     },
+    //     hideClass: {
+    //       popup: 'animate__animated animate__fadeOutUp'
+    //     } 
+    //   })
+    // }
+    // ThisForComp()
+    window.location.replace();
+
+  }
+
+
    return (
      <>
      {/* bg="light" variant="light" */}
@@ -163,9 +190,9 @@
        <Navbar.Collapse id="responsive-navbar-nav" className='nav-left-options'>
            <Nav className="me-auto" >
              <Nav.Link> <a href="https://mdbootstrap.com/docs/react/getting-started/installation/" className="navbar-links"> Home </a> </Nav.Link>
-             <Nav.Link href="#"> <a href=""  className="navbar-links"> Contact  </a> </Nav.Link>
+             <Nav.Link to="contact" href="#">  <a href=""  className="navbar-links" onClick={GoToCompany}> Company  </a>  </Nav.Link>
            <Nav>
-             <Nav.Link href="#"> <a href=""  className="navbar-links"> Complain  </a> </Nav.Link>
+             <Nav.Link href="#"> <a href=""  className="navbar-links">Contact</a> </Nav.Link>
              <Nav.Link eventKey={2} href="#memes">
              <a href=""  className="navbar-links">
                About

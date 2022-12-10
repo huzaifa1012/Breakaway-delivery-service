@@ -68,6 +68,7 @@ const FormDisabledDemo = () => {
           </div>
           <div className="form-right w3-animate-right">
             <Form
+            id="id-for-navigate-to-hero"
               className="main-form"
               labelCol={{
                 span: 4,
@@ -81,7 +82,6 @@ const FormDisabledDemo = () => {
             >
               <Form.Item>
                 <Input
-                id="id-for-navigate-to-hero"
                   placeholder="Your Name"
                   onChange={(e) => {
                     setName(e.target.value);

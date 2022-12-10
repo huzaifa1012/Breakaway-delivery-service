@@ -8,7 +8,7 @@ export default function Rout() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/company" element={<h1>Contact</h1>} />
           <Route path="/about" element={<h1>About Section</h1>} />
           <Route path="/" element={<h1>main</h1>} />
           <Route path="*" element={<h1>Wrong Data</h1>} />

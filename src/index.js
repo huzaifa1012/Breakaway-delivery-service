@@ -11,10 +11,6 @@ import FormDisabledDemo from "./components/antdBasicForm/basicForm";
 import Hero from "./components/heroSection/hero";
 import Footer from "./components/Footer/footer";
 
-// mdb fonts
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

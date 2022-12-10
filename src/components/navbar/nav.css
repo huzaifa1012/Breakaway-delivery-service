@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: -7px;
-  border-bottom: 2px solid blue;
+  /* border-bottom: 2px solid blue; */
 
   color: white;
 }
@@ -18,9 +18,13 @@
 .mainLogo {
   width: 160px;
   margin: -5px;
+  padding-bottom: 3px;
  }
  .navbar-links {
   color: white;
+ }
+ a {
+  text-decoration: none;
  }
 .nav-link {
   font-size: 18px;
@@ -34,11 +38,13 @@
 .nav-link:hover {
   border-radius: 50px;
   color: white;
-  /* color: blue; */
-  /* background-color:white; */
 }
 .left-wrap {
-
+  /* background-image: url(./new\ toggle.png);  */
+  border: none;
+  padding: 0px;
+}
+.left-wrap ,select{
 }
 /* as left side (Logo) */
 .w3-animate-left {
@@ -49,8 +55,15 @@
 .heasder2 {
   padding-left: 29px;
   padding-right: 100px;
-  /* color: pink; */
   font-size: 16px;
+}
+.navbar-toggler-icon {
+  background-image: url(./navtoggler.png);
+  border: none;
+
+  width: 35px;
+  height: 30px;
+  margin: 0px;
 }
 
 @media (min-width: 121px) and (max-width: 991px) {

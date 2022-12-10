@@ -26,14 +26,13 @@
   align-items: center;
   margin: 0px auto;
   text-align: center;
-  width: 900px;
+  width: 900px; 
   height: 100%;
 }
 .hero-h1 {
   color: white;
   font-weight: 900;
-  font-size: 75px;
-}
+  font-size: 75px;}
 .hero-p {
   color: white;
   font-size: 20px;

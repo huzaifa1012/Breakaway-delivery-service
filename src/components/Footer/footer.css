@@ -1,0 +1,83 @@
+
+
+
+.footer {
+	margin: 0px;
+	display: flex;
+	background-color:rgb(0, 125, 255);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.801);
+	border-top: 2px solid rgba(255, 255, 255, 0.801);
+	color: rgba(255, 255, 255, 0.726);
+}
+.every-footer-box {
+	width: 50%;
+	font-weight: 600;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding: 20px;
+	height: 175px;
+	font-size: 12px;
+	/* padding-bottom: 5px; */
+}
+.every-footer-box  h3 {
+	margin-bottom: 20px;
+}
+.address p {
+	margin: 0px;
+
+}
+.footer-ul {
+	padding: 0px;
+}
+.footer-ul li {
+	list-style: none;
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.icons-social {
+	/* color: white; */
+	font-weight: 500;
+	text-align: right;
+	/* display: flex; */
+	/* justify-content: center; */
+	/*  */
+	padding-left: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.downBar {
+	width: 100vw;
+	text-align: left;
+	padding: 20px;
+	font-weight: 600;
+	  background: rgb(0, 125, 255);
+	  align-items: center;
+	  color: white;
+}
+.downBar p {
+	margin: 0px;
+}
+
+
+@media (min-width:20px) and (max-width:500px) {
+	.footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.every-footer-box{
+	padding: 30px;
+
+	}
+	.bottom2 {
+		width: 50%;
+	}
+}
+@media (min-width:10px) and (max-width:320px){
+	.every-footer-box{
+		padding: 10px;
+		height: auto;
+	}
+	.footer{
+		padding: 10px;
+	}
+}

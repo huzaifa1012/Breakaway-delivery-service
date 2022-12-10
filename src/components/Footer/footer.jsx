@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div className="downBar">
           <p>&copy; Copyrigted 2022 by Breakaway </p>
-          <p>Report </p>
+          
           <i class="fas fa-tol" ></i>
         </div>
       </div>

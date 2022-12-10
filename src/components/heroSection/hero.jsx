@@ -17,7 +17,6 @@ export default function Hero() {
               <span className="importedbtn">
                 <a href="#id-for-navigate-to-hero"></a>
               </span>
-  
 
             </div>
           </div>

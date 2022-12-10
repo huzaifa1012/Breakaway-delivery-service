@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { app, db } from "../firebaseconfig";
 import { collection, addDoc } from "firebase/firestore";
-import { PlusOutlined } from "@ant-design/icons";
 import FileMax3 from "../Upload max3/fileupload";
 import "./antd-basic-form.css";
 import carGif from "./Media/resized car.gif";

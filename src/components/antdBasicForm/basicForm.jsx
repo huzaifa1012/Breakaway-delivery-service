@@ -81,6 +81,7 @@ const FormDisabledDemo = () => {
             >
               <Form.Item>
                 <Input
+                id="id-for-navigate-to-hero"
                   placeholder="Your Name"
                   onChange={(e) => {
                     setName(e.target.value);
@@ -131,7 +132,7 @@ const FormDisabledDemo = () => {
                 <FileMax3   />
               </Form.Item>
               <Form.Item className="submit-but">
-                <Button id="form-button-test" className="buton-ofform-botom"
+                <Button  className="buton-ofform-botom"
                   onClick={() => {
                     addOrderPersonData();
                   }}

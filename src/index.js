@@ -2,26 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-// import Header from './components/navbar/navbar';
-import Header01 from "./components/navbar/navbar";
+// import Header from './components/navbar/navbar'; 
 import Rout from "./components/rout/rout";
-import Carausal from "./components/carausal/carausal";
-import Categories from "./components/categories/categories";
-import FormDisabledDemo from "./components/antdBasicForm/basicForm";
-import Hero from "./components/heroSection/hero";
-import Footer from "./components/Footer/footer";
+import { BrowserRouter } from "react-router-dom";
 
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <Header01 />
-    <Carausal />
-    <Hero />
-    <FormDisabledDemo />
-    <Footer/>
-    {/* <Rout/> */}
+  <BrowserRouter>
+    <Rout/>
+  </BrowserRouter>
   </>
 );
 

@@ -1,25 +1,31 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "../navbar/navbar";
-import Contact from "../contact/contact";
-import { Link } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
+
+import Main from "../MainPage/main";
+import About from "../About/about.jsx"
+import Contact from "../rout/Contact";
+import Company from"../CompanySection/company"
+import PageNotFound from "../../404/404"; 
+import CompanyOrderPage from "../COMPANY Components/Company Order Form/companyOrderForm";
 export default function Rout() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/company" element={<h1>Contact</h1>} />
-          <Route path="/about" element={<h1>About Section</h1>} />
-          <Route path="/" element={<h1>main</h1>} />
-          <Route path="*" element={<h1>Wrong Data</h1>} />
+
+<Routes>
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/" element={<Main/>} />
+          <Route path="/company" element={<Company/>} />
+          <Route path="*" element={<PageNotFound/>} />
+          <Route path="/companyorder" element={<CompanyOrderPage/>} />
         </Routes>
 
-        <ul>
+        {/* <ul>
           <li> <Link to="contact"> Contact </Link></li>
           <li><Link to="about">About</Link></li>
           <li>Main 3</li>
-        </ul>
-      </BrowserRouter>
+        </ul> */}
+
     </>
   );
 }

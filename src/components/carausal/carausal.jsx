@@ -7,14 +7,13 @@ function Carausal() {
 
     <Carousel className='mainCarausal'>
       <Carousel.Item>
-        <a href="#">
+        
         <img
         className="d-block w-100"
         src={adBanner}
         alt="First slide"
         
         />
-        </a>
         <Carousel.Caption>
           {/* <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}

@@ -7,7 +7,9 @@ export default function Hero() {
           <div className="hero-main">
             <div className="fin-main w3-animate-bottom">
 
-            <h1 className="hero-h1">The Best Delivery Service Ever</h1>
+            
+            <h1 className="hero-h1"> The Best Delivery Service Ever</h1>
+
             <p className="hero-p">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
               animi quidem distinctio assumenda impedit expedita ratione
@@ -15,7 +17,8 @@ export default function Hero() {
               fuga aperiam commodi excepturi aliquam magni!
             </p>
               <span className="importedbtn">
-                <a href="#id-for-navigate-to-hero"></a>
+                <a href="#id-for-navigate-to-hero" >
+                </a>
               </span>
 
             </div>

@@ -1,46 +1,70 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import Header from "../../navbar/navbar";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Alert, Button, Checkbox, Form, Input } from "antd";
 import Footer from "../../Footer/footer";
+import Swal from "sweetalert2";
 import "./company.css";
-import app from "../../firebaseconfig";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-
-
 export default function Company() {
-  
+  useEffect(() => {
+    // Start From This
+    // var user = firebase.auth().currentUser; if (user) { alert("Han he")}
+
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        // alert("han he")
+        navigate("/companyorder");
+        
+      } else {
+        // User is signed out
+    //     // ...
+    //  alert("Nhi he")
+
+      }
+    });
+  });
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
+
   function SignIn() {
     const auth = getAuth();
-    
+
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-      navigate("/companyorder")
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        navigate("/companyorder");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log("we can't Logged You in ");
-        // navigate=("/contact")
-
+        const wrongEmaPasPopUp = () => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please enter correct email & password",
+            footer: '<a href="">Why do I have this issue?</a>',
+          });
+        };
+        wrongEmaPasPopUp();
       });
     console.log(email);
     console.log(password);
   }
-  const GoToSignup = () => {};
+  const GoToSignup = () => {
+    alert("signupPage");
+  };
 
   return (
     <>

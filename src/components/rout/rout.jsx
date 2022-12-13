@@ -7,6 +7,7 @@ import Contact from "../rout/Contact";
 import Company from"../COMPANY Components/Company Login/company"
 import PageNotFound from "../../404/404"; 
 import CompanyOrderPage from "../COMPANY Components/Company Order Form/companyOrderForm";
+import Register from "../COMPANY Components/Register/Register"
 export default function Rout() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Rout() {
           <Route path="/company" element={<Company/>} />
           <Route path="*" element={<PageNotFound/>} />
           <Route path="/companyorder" element={<CompanyOrderPage/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
 
         {/* <ul>

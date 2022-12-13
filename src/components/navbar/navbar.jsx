@@ -12,7 +12,7 @@ function Header() {
   function GoToCompany() {
    }
 
-  return (
+  return (  
     <>
       {/* bg="light" variant="light" */}
       <Navbar className="main-nav" collapseOnSelect expand="lg">

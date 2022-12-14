@@ -3,7 +3,8 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import "./comp-hero.css";
 import { useNavigate } from "react-router-dom";
 import manwithcar from "./media/manwithcar.png"
-// import vectback from "./media/vcotrgoods.png"
+import compTruck from "./media/compTruck.gif"
+import transparent from "./media/myb.gif"
 import gdsmn from "./media/goodsman.png"
 export default function CompanyBanner() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ export default function CompanyBanner() {
 
 
           <h1 className="comp-hero-h1">
-              Register Your Business With <span className="brk-blu">  Breakaway </span>
+             Now Register Your Business With <span className="brk-blu">  Breakaway </span>
             </h1>
             <p className="comp-hero-p">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
@@ -44,6 +45,7 @@ export default function CompanyBanner() {
               pariatur enim assumenda.
             </p>
             <button
+            className="comp-hero-btn"
               onClick={() => {
                 logout();
               }}
@@ -57,7 +59,7 @@ export default function CompanyBanner() {
           <div className="comp-right">
 
    
-            <img src={manwithcar} className="hero-main-img" alt="" />
+            <img src={transparent} className="hero-main-img" alt="" />
 
 
           </div>

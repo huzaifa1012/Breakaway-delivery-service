@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import "./comp-hero.css";
 import { useNavigate } from "react-router-dom";
-import manwithcar from "./media/manwithcar.png"
-import compTruck from "./media/compTruck.gif"
-import transparent from "./media/myb.gif"
-import gdsmn from "./media/goodsman.png"
+import undraw from "./media/undraw.svg"
+import agreement from "./media/agreement.svg"
 export default function CompanyBanner() {
   const navigate = useNavigate();
   useEffect(() => {
@@ -59,7 +57,7 @@ export default function CompanyBanner() {
           <div className="comp-right">
 
    
-            <img src={transparent} className="hero-main-img" alt="" />  
+            <img src={agreement} className="hero-main-img" alt="" />  
 
 
           </div>

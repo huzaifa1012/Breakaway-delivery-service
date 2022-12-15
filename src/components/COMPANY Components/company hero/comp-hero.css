@@ -24,11 +24,11 @@
   flex-wrap: wrap;
 }
 .hero-main-img {
-  width: 600px;
+  width: 700px;
   /* height: 400px; */
   text-align: center;
   align-items: center;
-  min-width: 80%;
+  min-width: 120%;
   max-width: 100%;
   /* border: 2px solid green; */
 }

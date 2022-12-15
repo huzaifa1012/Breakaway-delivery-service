@@ -1,0 +1,53 @@
+.comp-how-wrapper {
+  width: 100%;
+  padding: 10px;
+  /* border: 2px solid red; */
+}
+
+.comp-howRgs {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.comp-how-to-hero {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-around;
+}
+.comp-how-h1 {
+  padding: 10px;
+  padding-bottom: 30px;
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.616);
+}
+.comp-reg-steps {
+  width: 50%;
+}
+.steps-img {
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  min-width: 110%;
+  max-width: 100%;
+}
+@media (min-width: 50px) and (max-width: 425px) {
+  .comp-how-to-hero {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .comp-reg-steps {
+    width: 100%;
+  }
+
+  .steps-img {
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    min-width: 120%;
+    max-width: 100%;
+  }
+}

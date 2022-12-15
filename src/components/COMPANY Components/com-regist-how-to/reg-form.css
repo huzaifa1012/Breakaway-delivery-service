@@ -1,0 +1,23 @@
+.reg-form-wrap {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.comp-reg-form{
+    width:100%;
+    /* display: flex;
+    justify-content: center; */
+    border: 2px solid black;
+    padding: 12px;
+}
+
+.comp-reg-data {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+}
+.comp-inp-wrap {
+    text-align: center;
+    width: 100%;
+    justify-content:center;
+}

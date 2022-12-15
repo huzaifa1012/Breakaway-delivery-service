@@ -59,7 +59,7 @@ export default function CompanyBanner() {
           <div className="comp-right">
 
    
-            <img src={transparent} className="hero-main-img" alt="" />
+            <img src={transparent} className="hero-main-img" alt="" />  
 
 
           </div>

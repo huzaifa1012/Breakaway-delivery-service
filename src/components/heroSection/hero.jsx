@@ -1,5 +1,7 @@
 import React from "react";
 import "./hero.css";
+
+
 export default function Hero() {
   return (
     <>
@@ -8,19 +10,22 @@ export default function Hero() {
             <div className="fin-main w3-animate-bottom">
 
             
-            <h1 className="hero-h1"> The Best Delivery Service Ever</h1>
+            <h1 className="hero-h1"> THE BEST COURIER SERVICE</h1>
 
+<div className="heroHr"></div>
             <p className="hero-p">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              animi quidem distinctio assumenda impedit expedita ratione
-              accusamus eius suscipit tenetur delectus libero, rerum repellat
-              fuga aperiam commodi excepturi aliquam magni!
+              animi quidem distinctio assumenda
             </p>
-              <span className="importedbtn">
+              {/* <span className="importedbtn">
                 <a href="#id-for-navigate-to-hero" >
                 </a>
-              </span>
+              </span> */}
+              <div className="hero-buttons-wrap">
 
+<button className="cr-btn"> ORDER NOW </button>
+<button className="tr-btn">CONTACT US</button>
+              </div>
             </div>
           </div>
       </div>

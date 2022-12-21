@@ -9,12 +9,49 @@ import { Link } from "react-router-dom";
 
 // import Hero from "../heroSection/hero"
 function Header() {
-  function GoToCompany() {
-   }
+  function GoToCompany() {}
 
-  return (  
+  return (
     <>
       {/* bg="light" variant="light" */}
+      <div className="patti-top">
+        <div className="patti-right">
+          <i
+            className="fa fa-facebook-square ica"
+            style={{ color: "white" }}
+            aria-hidden="true"
+          ></i>
+          &nbsp;
+          <i className="fa fa-pinterest ica" aria-hidden="true"></i>
+          &nbsp;
+          <i
+            className="fa fa-whatsapp ica"
+            style={{ color: "white" }}
+            aria-hidden="true"
+          ></i>
+          &nbsp;
+          <i className="fa fa-twitter ica" aria-hidden="true"></i>
+        </div>
+
+        <div className="patti-right">
+          <i className="fa fa-map-marker ica" aria-hidden="true"></i>
+          <p>123 Street City</p>
+
+          <i
+            className="fa fa-phone ica"
+            style={{ color: "white" }}
+            aria-hidden="true"
+          ></i>
+          <p>1.231.15.424</p>
+
+          <i
+            className="fa fa-envelope ica"
+            style={{ color: "white" }}
+            aria-hidden="true"
+          ></i>
+          <p>breakaway-helpline@gmail.com</p>
+        </div>
+      </div>
       <Navbar className="main-nav" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="w3-animate-left">
@@ -31,33 +68,43 @@ function Header() {
             className="nav-left-options"
           >
             <Nav className="me-auto">
+              
               <Nav.Link>
                 {" "}
                 <li className="navbar-links">
-                <Link to="/">Home</Link>
-                </li>
-                </Nav.Link>
-              <Nav.Link>
-                <li className="navbar-links" onClick={GoToCompany}>
-                <Link to="/company">Company </Link>
-
+                  <Link to="/">Home</Link>
                 </li>
               </Nav.Link>
-              <Nav>
-                <Nav.Link>
-                  <li className="navbar-links" > 
+              
+              <Nav.Link>
+                <li className="navbar-links" onClick={GoToCompany}>
+                  <Link to="/company">Company </Link>
+                </li>
+              </Nav.Link>
 
-                  <Link to="/contact" color="Red">Contact </Link>
-
+              
+              <Nav.Link eventKey={2}>
+                  <li className="navbar-links">
+                    <Link to="/gifts">Gifts</Link>
                   </li>
-                  </Nav.Link>
+                </Nav.Link>
+              
+                
+                <Nav.Link>
+                  <li className="navbar-links">
+                    <Link to="/contact" color="Red">
+                      Contact{" "}
+                    </Link>
+                  </li>
+                </Nav.Link>
+                
+                
                 <Nav.Link eventKey={2}>
                   <li className="navbar-links">
-                  <Link to="/about">About</Link>
-
-                    </li>
+                    <Link to="/about">About</Link>
+                  </li>
                 </Nav.Link>
-              </Nav>
+              
 
               {/* <NavDropdown title="Servive Provider" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1"></NavDropdown.Item>

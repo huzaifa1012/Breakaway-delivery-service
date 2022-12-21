@@ -8,6 +8,7 @@ import Company from"../COMPANY Components/Company Login/company"
 import PageNotFound from "../../404/404"; 
 import CompanyOrderPage from "../COMPANY Components/Company Order Form/companyOrderForm";
 import Register from "../COMPANY Components/Register/Register"
+import Gifts from "../gifts/media/gift";
 export default function Rout() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Rout() {
           <Route path="*" element={<PageNotFound/>} />
           <Route path="/companyorder" element={<CompanyOrderPage/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/gifts" element={<Gifts/>} />
         </Routes>
 
         {/* <ul>

@@ -20,7 +20,7 @@ export default function HowToRegisterCompany() {
     <>
       <div className="comp-how-wrapper">
         <div className="comp-howRgs">
-          <h1 className="comp-how-h1">How To Register</h1>
+          <h1 className="comp-how-h1">How To <span className="patla-blue"> Register </span></h1>
         </div>
         <div className="comp-how-to-hero">
           <div className="comp-reg-steps">

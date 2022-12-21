@@ -11,8 +11,8 @@ return(
     <>
     <Header/>
     <CompanyBanner/>
-    <HowToRegisterCompany/>
     <Facility/>
+    <HowToRegisterCompany/>
     {/* <CompanyRegistForm/> */}
     </>
 )

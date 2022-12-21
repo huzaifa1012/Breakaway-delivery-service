@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../../firebaseconfig";
+import { db } from "../firebaseconfig";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import "./cards.css";
-export const Cards = () => {
+export default function Cards ()  {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const gettingRealtimeProducts = () => {
@@ -63,7 +63,7 @@ export const Cards = () => {
             </div>
           </div>
 
-          {/* <div className="prod-box-wrap">
+          <div className="prod-box-wrap">
             <div className="prod-box">
               <div className="box-img-wrap">
                 <img
@@ -253,7 +253,7 @@ export const Cards = () => {
                 <button className="buy-btn-s">Buy Now</button>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

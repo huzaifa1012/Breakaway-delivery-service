@@ -6,9 +6,10 @@ import About from "../About/about.jsx"
 import Contact from "../rout/Contact";
 import Company from"../COMPANY Components/Company Login/company"
 import PageNotFound from "../../404/404"; 
-import CompanyOrderPage from "../COMPANY Components/Company Order Form/companyOrderForm";
+import CompanyPage from "../COMPANY Components/CompanyPageFolder/companyPage";
 import Register from "../COMPANY Components/Register/Register"
 import Gifts from "../gifts/media/gift";
+import Simpleorder from "../SimpleOrderForm/simpleOrderForm.jsx"
 export default function Rout() {
   return (
     <>
@@ -19,9 +20,10 @@ export default function Rout() {
           <Route path="/" element={<Main/>} />
           <Route path="/company" element={<Company/>} />
           <Route path="*" element={<PageNotFound/>} />
-          <Route path="/companyorder" element={<CompanyOrderPage/>} />
+          <Route path="/companyorder" element={<CompanyPage/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/gifts" element={<Gifts/>} />
+          <Route path="/order" element={<Simpleorder/>} />
         </Routes>
 
         {/* <ul>

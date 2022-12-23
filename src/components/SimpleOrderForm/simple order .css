@@ -1,0 +1,56 @@
+body {
+  /* background-image: url("https://img.freepik.com/free-vector/blue-abstract-gradient-wave-vector-background_53876-111548.jpg?w=2000"); */
+  background-position: center;
+  /* background-repeat: no-repeat; */
+
+  background-size: cover;
+}
+.mainOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+.leftImg {
+  /* border: 4px solid orange; */
+  width: 400px;
+  opacity: 0.3;
+  margin-left: -400px;
+  /* border: 2px solid black; */
+}
+
+.css-126nd9x-MuiPaper-root {
+  width: 100%;
+  background-color: red;
+  border:none !important;
+  /* border: none !important; */
+}
+
+.blackImg {
+  width: 450px;
+}
+.rightForm {
+  width: 100vw;
+  background-color: red;
+  width: 400px;
+  border: 3px solid red;
+}
+.css-126nd9x-MuiPaper-root {
+  background-color: rgba(255, 255, 255, 0.863) !important;
+  
+}
+.css-nicjba-MuiContainer-root {
+  display: none;
+}
+
+@media (min-width: 10px) and (max-width: 768px) {
+
+
+  .leftImg {
+    /* border: 4px solid orange; */
+    width: 400px;
+    opacity: 0.3;
+    margin-left: 0px;
+   }
+
+}

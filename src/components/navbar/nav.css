@@ -103,8 +103,9 @@
 
 }
 .navbar-toggler-icon {
-  background-image: url(./navtoggler.png);
+  background-image: url(./navtoggler.png) !important;
   border: none;
+  /* background-image: none; */
   width: 35px;
   height: 30px;
 }
@@ -112,6 +113,9 @@
   width: 400px;
 }
 
+.navbar-light .navbar-toggler-icon {
+  /* background-image: ; */
+}
 @media (min-width: 121px) and (max-width: 991px) {
  
   /* as left side (Logo) */

@@ -4,6 +4,10 @@
   height: 320px;
   /* border: 2px solid red; */
 }
+.img-wrapfeatur {
+  /* color: red; */
+  /* background-color: red; */
+}
 .features {
   width: 100%;
   display: flex;
@@ -16,13 +20,15 @@
   padding: 50px 30px 50px 30px;
   height: auto;
   background-color: #13aff0;
+  background-color: #00a5ec;
 }
 .featureBox:hover {
   transition: 0.9s;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .featHIghlightes {
   background-color: #269ed0;
+  background-color: #006894;
 }
 .features-hr {
   display: flex;
@@ -36,7 +42,8 @@
   text-align: center;
 }
 .featureBox p {
-  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
 }
 @media (min-width: 10px) and (max-width: 425px) {
   .featuresWrap {

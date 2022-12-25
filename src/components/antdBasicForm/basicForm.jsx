@@ -58,7 +58,7 @@ const FormDisabledDemo = () => {
               animi expedita iste unde nostrum quasi, accusamus mollitia eos at
               tempore veritatis.
             </p>
-            <img src={carGif} alt="Delivery Car" className="main-hero-gif" />
+            {/* <img src={carGif} alt="Delivery Car" className="main-hero-gif" /> */}
             <br />
             <div className="hero-button">
               <button className="helpline-btn">HELPLINE</button>
@@ -66,80 +66,7 @@ const FormDisabledDemo = () => {
             </div>
           </div>
           <div className="form-right w3-animate-right">
-            <Form
-            id="id-for-navigate-to-hero"
-              className="main-form"
-              labelCol={{
-                span: 4,
-              }}
-              wrapperCol={{
-                span: 14,
-              }}
-              layout="horizontal"
-              onValuesChange={onFormLayoutChange}
-              disabled={componentDisabled}
-            >
-              <Form.Item>
-                <Input
-                  placeholder="Your Name"
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
-                />
-              </Form.Item>
-
-              <Form.Item>
-                <Input placeholder="Your Email"  onChange={(e) => {
-                    getEmail(e.target.value);
-                  }} />
-              </Form.Item>
-
-              <Form.Item>
-                <Input placeholder="Phone / Whatsapp"  onChange={(e) => {
-                    getPhone(e.target.value);
-                  }} />
-              </Form.Item>
-
-              <Form.Item>
-                <Input placeholder="Apartment 0123/ Street/ City/ state"  onChange={(e) => {
-                    getPickHere(e.target.value);
-                  }}   />
-              </Form.Item>
-
-              <Form.Item>
-                <Input placeholder="Apartment 0123/ Street/ City/ state"  onChange={(e) => {
-                    getDropkHere(e.target.value);
-                  }}   />
-              </Form.Item>
-
-                
-              <Form.Item>
-                <TextArea
-                  rows={3}
-                  placeholder="(Optional) Adiitional Details "
-                  onChange={(e) => {
-                    getDetail(e.target.value);
-                  }
-                } 
-                />
-              </Form.Item>
-              {/* <Form.Item  valuePropName="checked">
-              <Switch />
-            </Form.Item> */}
-              <Form.Item valuePropName="fileList" className="buton-ofform-botom">
-                {/* Coming from component */}
-                <FileMax3   />
-              </Form.Item>
-              <Form.Item className="submit-but">
-                <Button  className="buton-ofform-botom"
-                  onClick={() => {
-                    addOrderPersonData();
-                  }}
-                >
-                  Submit Order
-                </Button>
-              </Form.Item>
-            </Form>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Unionsquare_sanfrancisco.jpg/300px-Unionsquare_sanfrancisco.jpg" alt="" />
           </div>
         </div>
       </div>

@@ -1,0 +1,120 @@
+.glimps-wrap {
+  padding: 50px;
+  background: rgb(0, 104, 148);
+  background: linear-gradient(
+    90deg,
+    rgb(0, 154, 219) 0%,
+    rgba(0, 165, 236, 1) 100%
+  );
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  background-size: cover;
+}
+.glimps {
+  color: white;
+  margin-bottom: 70px;
+  /* display: flex;
+  justify-content: space-evenly; */
+}
+.glimp-one {
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+.glimp-left {
+  width: 45%;
+  font-size: 17px;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+
+.glimp-right {
+  /* border: 2px solid red; */
+  width: fit-content;
+}
+.glimps-img {
+  border-radius: 5px;
+  width: 300px;
+}
+.other-glimps {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;   
+}
+
+/* Special  */
+.special-glimp-box {
+  width: 60%;
+}
+.special-glimp-h {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+
+
+/* /////////// */
+.others-wrap {
+    display: flex;
+    justify-content: center;
+}
+.heading-span {
+    font-size: 25px;
+    margin-bottom:19px ;
+}
+.other {
+    background-color:#FAFAFA;
+    border-radius: 5px;
+    width: 80%;
+    padding: 20px;
+    color: #333333;
+    align-items: baseline;
+}
+.right {
+    /* height: 100%;
+    background-color: white;
+    height: 200px;
+    display: flex;
+    /* justify-content: end; */
+    /* align-items: flex-end;  */
+}
+.underMaterial {
+    padding: 35px 60px 34px 60px;
+}
+.other-img {
+    /* width: 300px; */
+    
+}
+.other-p {
+    /* padding-left: 10px; */
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.link-a {
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #007ab7 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    word-spacing: 1.3px;
+    border: 2px solid #007ab7 ;
+    border-radius: 40px;
+    transition: 0.2s;
+    margin:0px auto
+}
+.link-a:hover {
+    text-decoration: none;
+    color: white;
+
+    border: none;
+    /* letter-spacing: 0.3px; */
+
+    background-color: #006894;
+}
+.box {
+    display: flex;padding: 10px;    
+}

@@ -47,7 +47,7 @@
 }
 @media (min-width: 10px) and (max-width: 425px) {
   .featuresWrap {
-    height: 500px;
+    height:fit-content;
   }
   .features {
     width: 100%;

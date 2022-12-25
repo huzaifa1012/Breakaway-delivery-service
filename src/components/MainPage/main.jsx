@@ -5,6 +5,7 @@ import Hero from "../heroSection/hero";
 import FormDisabledDemo from "../antdBasicForm/basicForm";
 import Footer from "../Footer/footer";
 import Features from "../features/feature";
+import Glimps from '../Glimps/glimps.jsx'
 export default function Main() {
   return (
     <>
@@ -12,7 +13,8 @@ export default function Main() {
       {/* <Carausal /> */}
       <Hero />
       <Features/>
-      <FormDisabledDemo />
+      {/* <FormDisabledDemo /> */}
+      <Glimps/>
       <Footer />
     </>
   );

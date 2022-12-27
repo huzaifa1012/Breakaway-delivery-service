@@ -141,7 +141,7 @@ export default function Company() {
                   Log in
                 </Button>
                 <br />
-                Or <Link to="/register"> Register now!</Link>
+                Or <Link to="/signup"> Register now!</Link>
               </Form.Item>
             </Form>
           </div>

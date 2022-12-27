@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       {/* bg="light" variant="light" */}
-      <div className="patti-top">
+      {/* <div className="patti-top">
         <div className="patti-right">
           <i
             className="fa fa-facebook-square ica"
@@ -51,8 +51,8 @@ function Header() {
           ></i>
           <p>breakaway-helpline@gmail.com</p>
         </div>
-      </div>
-      <Navbar className="main-nav" collapseOnSelect expand="lg">
+      </div> */}
+      <Navbar className="main-nav fixed-top " style={{padding:"10px"}} collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="w3-animate-left">
             <img src={Logo} alt="" className="mainLogo" />

@@ -1,5 +1,5 @@
 .glimps-wrap {
-  padding: 50px;
+  /* padding: 50px; */
   background: rgb(0, 104, 148);
   background: linear-gradient(
     90deg,
@@ -19,12 +19,15 @@
 .glimp-one {
   display: flex;
   justify-content: space-evenly;
-  /* border: 2px solid red; */
+  width: 100vw;
   align-items: center;
+  height: auto;
+  flex-wrap: wrap-reverse;
 }
+/* ///////////////////////////////////// */
 .glimp-left {
-  width: 45%;
-  font-size: 17px;
+  width: 2500px;
+  font-size: 13px;
   /* border: 2px solid red; */
   align-items: center;
 }
@@ -36,9 +39,11 @@
 .glimps-img {
   border-radius: 5px;
   width: 300px;
+  padding-top: 60px;
 }
 .other-glimps {
     background-color: white;
+    
     color: black;
     padding: 20px;
     border-radius: 20px;   
@@ -57,6 +62,7 @@
 
 /* /////////// */
 .others-wrap {
+  background-color: #696969;
     display: flex;
     justify-content: center;
 }
@@ -65,17 +71,18 @@
     margin-bottom:19px ;
 }
 .other {
-    background-color:#FAFAFA;
+    background-color:#f0f0f0;
     border-radius: 5px;
-    width: 80%;
+    /* width: 80%; */
     padding: 20px;
     color: #333333;
     align-items: baseline;
 }
 .right {
-    /* height: 100%;
-    background-color: white;
-    height: 200px;
+width: 600px;
+  /* /* height: 100%; */
+    /* background-color: white; */
+    /* height: 200px; */
     display: flex;
     /* justify-content: end; */
     /* align-items: flex-end;  */
@@ -83,12 +90,10 @@
 .underMaterial {
     padding: 35px 60px 34px 60px;
 }
-.other-img {
-    /* width: 300px; */
+/* .other-img {
     
-}
+} */
 .other-p {
-    /* padding-left: 10px; */
     width: 100%;
     font-size: 18px;
     margin-bottom: 25px;
@@ -111,10 +116,106 @@
     color: white;
 
     border: none;
-    /* letter-spacing: 0.3px; */
+    letter-spacing: 0.7px;
 
     background-color: #006894;
 }
 .box {
-    display: flex;padding: 10px;    
+    display: flex;
+    padding: 10px;    
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+.secnd-glimps {
+  flex-wrap: wrap;
+}
+.fourt-glimps {
+  flex-wrap: wrap;
+}
+.fifth-glimps {
+  flex-wrap: wrap-reverse;
+}
+.sixth-glimps {
+  flex-wrap: wrap;
+}
+/* Tablet */
+@media (min-width:425px) and ((max-width:768px)) {
+  .other {
+    width: 95vw;
+  }
+  .glimp-one {
+  padding-top:50px ;
+  }
+  .glimp-left {
+    width: 350px;
+    /* border: 3px solid red; */
+  }
+  .glimps-img {
+    width: 250px;
+  }
+  .glimp-one h2 {
+    font-size: 36px;
+  }
+  .right {
+    /* width: 700px;
+    */
+       width: 50%;
+  }
+  .left{
+    width: 50%;
+    /* width: 100px; */
+    /* border: 4px solid red; */
+  }
+  .other-img {
+    width: 100%;
+   }
+   
+   .underMaterial {
+       padding: 0px 20px 10px 20px;
+       width: 100%;
+   }
+   .underMaterial p {
+    font-size: 14px;
+   }
+}
+@media (min-width:425px) and (max-width:615px){
+ 
+  .right {
+    /* width: 700px;
+    */
+    padding-top:40px;
+       width: 100%;
+  }
+  .left{
+    width: 100%;
+    /* width: 100px; */
+    /* border: 4px solid red; */
+  }
+  .other-img {
+    width: 100%;
+   }
+   
+   .underMaterial {
+       padding: 0px 0px 0px 0px;
+       width: 100%;
+   }
+   .underMaterial p {
+    font-size: 14px;
+   }
+}
+
+/* Small */
+@media (min-width:10px) and ((max-width:425px)) {
+  .other-img {
+    width: 250px;
+   }
+   .right {
+    width: 100%;
+   }
+   .underMaterial {
+    padding: 10px;
+   }
+   .underMaterial p {
+    font-size: 14px;
+   }
 }

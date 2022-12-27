@@ -10,6 +10,7 @@ import CompanyPage from "../COMPANY Components/CompanyPageFolder/companyPage";
 import Register from "../COMPANY Components/Register/Register"
 import Gifts from "../gifts/media/gift";
 import Simpleorder from "../SimpleOrderForm/simpleOrderForm.jsx"
+import ApplyRegistration from "../apply for registration/apply registration";
 export default function Rout() {
   return (
     <>
@@ -21,9 +22,11 @@ export default function Rout() {
           <Route path="/company" element={<Company/>} />
           <Route path="*" element={<PageNotFound/>} />
           <Route path="/companyorder" element={<CompanyPage/>} />
-          <Route path="/register" element={<Register/>} />
+          <Route path="/signup" element={<Register/>} />
           <Route path="/gifts" element={<Gifts/>} />
           <Route path="/order" element={<Simpleorder/>} />
+          <Route path="/registration" element={<ApplyRegistration/>} />
+          
         </Routes>
 
         {/* <ul>

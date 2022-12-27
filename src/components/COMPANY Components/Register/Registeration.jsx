@@ -5,8 +5,6 @@ import { Alert, Button, Checkbox, Form, Input } from "antd";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseconfig";
 import Swal from "sweetalert2";
-// css
-import "./register.css";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer/footer";
 import {
@@ -16,6 +14,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { async } from "@firebase/util";
+import "./register.css";
 
 export default function RegisterationForm() {
   useEffect(() => {
@@ -50,8 +49,6 @@ export default function RegisterationForm() {
             password: password,
           });
         }
-
-        // navigate("/companyorder");
       )
       .catch((error) => {
         const errorCode = error.code;

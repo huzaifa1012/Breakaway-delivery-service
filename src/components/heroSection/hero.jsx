@@ -21,7 +21,7 @@ export default function Hero() {
               </span> */}
             <div className="hero-buttons-wrap">
               <Link to={"./order"}>
-                {" "}
+                
                 <button className="cr-btn"> ORDER NOW </button>
               </Link>
               <button className="tr-btn">CONTACT US</button>

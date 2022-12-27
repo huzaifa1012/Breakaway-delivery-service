@@ -1,0 +1,31 @@
+.company-body-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-body {
+    display: flex;
+    
+    width: 90vw;
+}
+
+
+
+
+.company-left {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 12px;
+    height: 100vh;
+}
+.company-right {
+    margin: 10px;
+    width: 30%;
+    border-radius: 12px;
+    border: 2px solid black;
+    height: 100vh;
+}

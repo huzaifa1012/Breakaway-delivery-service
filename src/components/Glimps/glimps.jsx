@@ -4,6 +4,8 @@ import "./glimps.css";
 export default function Glimps() {
   return (
     <>
+
+
       <div className="glimps-wrap">
         <div className="glimps">
           <div className="glimp-one ">
@@ -31,9 +33,135 @@ export default function Glimps() {
           </div>
         </div>
       </div>
+      
+      
+      <div className="others-wrap">
+        <div className="other">
+          <div className="box secnd-glimps" >
+            <div className="left">
+              <img
+                src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD_fy20_dollargeneral_e1a3961_fdi.jpg"
+                alt=""
+                className="other-img"
+              />
+            </div>
+            <div className="right">
+              <div className="underMaterial">
+                <h2>
+                  <span className="heading-span">The Heading Text</span>
+                </h2>
+                <p className="other-p">
+                  amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+                  Eligendi Lillum, odit porro numquam ex sit totam modi sunt
+                  sint ad aliquam optio culpa natus laudantium nesciunt
+                  recusandae tenetur.
+                </p>
+                <a href="#" className="link-a">
+                  LETS SIGNUP
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="others-wrap">
         <div className="other">
           <div className="box">
+            <div className="right">
+              <div className="underMaterial">
+                <h2>
+                  <span className="heading-span">The Heading Text</span>
+                </h2>
+                <p className="other-p">
+                  amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+                  Eligendi Lillum, odit porro numquam ex sit totam modi sunt
+                  sint ad aliquam optio culpa natus laudantium nesciunt
+                  recusandae tenetur.
+                </p>
+                <a href="#" className="link-a">
+                  LETS SIGNUP
+                </a>
+              </div>
+            </div>
+            <div className="left">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg/500px-Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg"
+                alt=""
+                className="other-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="others-wrap">
+        <div className="other">
+          <div className="box fourt-glimps">
+            <div className="left">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Competition_in_the_groceries_business%2C_Morocco_Street%2C_London_SE1.jpg/500px-Competition_in_the_groceries_business%2C_Morocco_Street%2C_London_SE1.jpg"
+                alt=""
+                className="other-img"
+              />
+            </div>
+            <div className="right">
+              <div className="underMaterial">
+                <h2>
+                  <span className="heading-span">The Heading Text</span>
+                </h2>
+                <p className="other-p">
+                  amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+                  Eligendi Lillum, odit porro numquam ex sit totam modi sunt
+                  sint ad aliquam optio culpa natus laudantium nesciunt
+                  recusandae tenetur.
+                </p>
+                <a href="#" className="link-a">
+                  LETS SIGNUP
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div className="others-wrap">
+        <div className="other">
+          <div className="box fifth-glimps">
+            <div className="right">
+              <div className="underMaterial">
+                <h2>
+                  <span className="heading-span">The Heading Text</span>
+                </h2>
+                <p className="other-p">
+                  amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+                  Eligendi Lillum, odit porro numquam ex sit totam modi sunt
+                  sint ad aliquam optio culpa natus laudantium nesciunt
+                  recusandae tenetur.
+                </p>
+                <a href="#" className="link-a">
+                  LETS SIGNUP
+                </a>
+              </div>
+            </div>
+            <div className="left">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg/500px-Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg"
+                alt=""
+                className="other-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div className="others-wrap">
+        <div className="other">
+          <div className="box sixth-glimps">
             <div className="left">
               <img
                 src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD_fy20_dollargeneral_e1a3961_fdi.jpg"

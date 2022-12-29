@@ -40,7 +40,7 @@ export default function Glimps() {
           <div className="box secnd-glimps" >
             <div className="left">
               <img
-                src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD_fy20_dollargeneral_e1a3961_fdi.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg/500px-Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg"
                 alt=""
                 className="other-img"
               />
@@ -48,7 +48,7 @@ export default function Glimps() {
             <div className="right">
               <div className="underMaterial">
                 <h2>
-                  <span className="heading-span">The Heading Text</span>
+                  <span className="heading-span">The Heading 01</span>
                 </h2>
                 <p className="other-p">
                   amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
@@ -164,7 +164,7 @@ export default function Glimps() {
           <div className="box sixth-glimps">
             <div className="left">
               <img
-                src="https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD_fy20_dollargeneral_e1a3961_fdi.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg/500px-Manila_Philippines_Pizza-Taxi-in-Makati-Business-District-01.jpg"
                 alt=""
                 className="other-img"
               />

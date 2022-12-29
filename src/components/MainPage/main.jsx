@@ -6,6 +6,7 @@ import FormDisabledDemo from "../antdBasicForm/basicForm";
 import Footer from "../Footer/footer";
 import Features from "../features/feature";
 import Glimps from '../Glimps/glimps.jsx'
+import ShippingService from "../shipping service/shipping services";
 export default function Main() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Main() {
       {/* <Carausal /> */}
       <Hero />
       <Features/>
+      <ShippingService/>
       {/* <FormDisabledDemo /> */}
       <Glimps/>
       <Footer />

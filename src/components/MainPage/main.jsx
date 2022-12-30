@@ -7,11 +7,13 @@ import Footer from "../Footer/footer";
 import Features from "../features/feature";
 import Glimps from '../Glimps/glimps.jsx'
 import ShippingService from "../shipping service/shipping services";
+import Spacer from "../spacer-for-header/spacer";
 export default function Main() {
   return (
     <>
       <Header />
       {/* <Carausal /> */}
+      <Spacer/>
       <Hero />
       <Features/>
       <ShippingService/>

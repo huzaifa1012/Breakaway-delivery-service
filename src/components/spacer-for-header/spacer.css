@@ -1,0 +1,19 @@
+.spacer {
+    width:100vw;
+    height:72px;
+    background-color:red;
+}
+
+
+
+
+@media (min-width: 10px) and (max-width: 991px) {
+    .spacer {
+        width:100vw;
+        height:59px;
+        background-color:red;
+    }
+
+
+}
+ 

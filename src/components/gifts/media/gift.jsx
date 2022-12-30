@@ -10,7 +10,6 @@ export default function Gifts() {
 
       <Header />
       <Carausal/>    
-      <h1>Gifts Section</h1>
       <Categories />
       <Cards />
     </>

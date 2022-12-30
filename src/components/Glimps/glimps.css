@@ -51,7 +51,7 @@
 
 /* Special  */
 .special-glimp-box {
-  width: 60%;
+  width: 50%;
 }
 .special-glimp-h {
   font-size: 45px;
@@ -143,8 +143,12 @@ width: 600px;
   .other {
     width: 95vw;
   }
+  .special-glimp-box {
+    padding-top: 50px;
+    width: 90%;
+  }
   .glimp-one {
-  padding-top:50px ;
+  padding-top:0px ;
   }
   .glimp-left {
     width: 350px;
@@ -157,14 +161,10 @@ width: 600px;
     font-size: 36px;
   }
   .right {
-    /* width: 700px;
-    */
        width: 50%;
   }
   .left{
     width: 50%;
-    /* width: 100px; */
-    /* border: 4px solid red; */
   }
   .other-img {
     width: 100%;
@@ -180,6 +180,7 @@ width: 600px;
 }
 @media (min-width:425px) and (max-width:615px){
  
+  
   .right {
     /* width: 700px;
     */
@@ -206,6 +207,16 @@ width: 600px;
 
 /* Small */
 @media (min-width:10px) and ((max-width:425px)) {
+  
+  .special-glimp-box{
+
+    padding-top: 40px;
+    width: 90%;
+  }
+  .special-glimp-h{
+  font-size: 30px;
+  }
+  
   .other-img {
     width: 250px;
    }

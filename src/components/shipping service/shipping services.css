@@ -61,7 +61,7 @@
   fill: red;
 }
 
-@media (min-width: 1px) and (max-width: 425px) {
+@media (min-width: 1px) and (max-width: 767px) {
   
   
 .shipping-service {

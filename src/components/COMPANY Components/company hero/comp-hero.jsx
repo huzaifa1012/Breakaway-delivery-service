@@ -34,6 +34,7 @@ export default function CompanyBanner() {
 
 
           <h1 className="comp-hero-h1">
+            
              Now Register Your Business With <span className="brk-blu">  Breakaway </span>
             </h1>
             <p className="comp-hero-p">

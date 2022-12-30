@@ -1,7 +1,7 @@
  /* @import url('');  */
  @font-face {
   font-family: popinsa ligt;
-  src: url('./font/Poppins-Light.ttf');
+  src: url('../fonts//Poppins-Light.ttf');
  }
 .patti-top {
   width: 100vw;
@@ -89,11 +89,8 @@
  margin: 0px 5px 0px 5px;
  
 }
-.nav-link:hover {
-  /* background-color:black ; */
-}
+
 .left-wrap {
-  /* background-image: url(./new\ toggle.png);  */
   border: none;
   padding: 0px;
 }

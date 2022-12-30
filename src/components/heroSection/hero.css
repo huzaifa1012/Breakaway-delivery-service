@@ -6,7 +6,7 @@
   font-family: popinsa btn;
   src: url(../fonts/Poppins-Medium.ttf);
 }
-popinsa ligt .hero-color-layer {
+.hero-color-layer {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@ popinsa ligt .hero-color-layer {
   font-weight: 200;
   width: 60vw;
   font-size: 55px;
-  
+
   padding: 10px;
   margin: 10px;
   margin-top: 40px;
@@ -138,32 +138,41 @@ popinsa ligt .hero-color-layer {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-    /* background-color:rgba(0, 0, 0, 0.466); */
   }
 
+  
   .hero-wrap {
+    margin-top: 20px;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: centerleft;
     align-items: center;
     /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1771%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(0%2c 100%2c 204%2c 1)'%3e%3c/rect%3e%3cpath d='M818.699195117857 300.08835421487663L815.9205294094196 220.51777919950945 697.9539997405875 264.4710652698492z' fill='rgba(0%2c 125%2c 255%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M412.7046022666242 33.27550760322886L308.3727383352018-86.74457252996059 292.6845221334347 137.60737153465124z' fill='rgba(0%2c 125%2c 255%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1436.663%2c561.394C1474.785%2c561.388%2c1511.984%2c547.077%2c1532.833%2c515.161C1555.814%2c479.982%2c1564.264%2c434.487%2c1543.387%2c398.02C1522.404%2c361.367%2c1478.839%2c344.956%2c1436.663%2c347.177C1398.174%2c349.204%2c1366.939%2c374.878%2c1347.784%2c408.323C1328.764%2c441.533%2c1321.222%2c482.097%2c1340.439%2c515.193C1359.588%2c548.172%2c1398.528%2c561.4%2c1436.663%2c561.394' fill='rgba(0%2c 125%2c 255%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M962.152%2c710.63C1006.863%2c713.423%2c1056.139%2c705.274%2c1079.792%2c667.229C1104.43%2c627.601%2c1093.069%2c577.604%2c1070.116%2c536.977C1046.712%2c495.552%2c1009.707%2c460.527%2c962.152%2c459.007C912.233%2c457.411%2c863.347%2c484.742%2c841.532%2c529.67C821.717%2c570.478%2c842.327%2c616.218%2c867.488%2c653.965C889.35%2c686.764%2c922.812%2c708.172%2c962.152%2c710.63' fill='rgba(0%2c 125%2c 255%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M436.509%2c455.016C483.83%2c452.177%2c521.61%2c421.951%2c547.434%2c382.196C576.529%2c337.406%2c605.215%2c282.421%2c578.768%2c236.019C552.182%2c189.373%2c490.184%2c186.274%2c436.509%2c187.574C385.821%2c188.802%2c333.41%2c200.168%2c305.707%2c242.634C275.543%2c288.872%2c270.902%2c350.044%2c299.853%2c397.051C327.664%2c442.207%2c383.571%2c458.192%2c436.509%2c455.016' fill='rgba(0%2c 125%2c 255%2c 1)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1771'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e"); */
     background-image: url("./media/heroBack.jpg");
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .hero-main {
+
     display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0px auto;
+    /* text-align: left; */
+    width: 85vw;
+    height: 100%;
+    border: 2px solid red;
+    
+    /* display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px auto;
     text-align: center;
     width: 900px;
     padding: 20px;
-    height: 100%;
+    height: 100%; */
   }
   .hero-h1 {
     color: white;

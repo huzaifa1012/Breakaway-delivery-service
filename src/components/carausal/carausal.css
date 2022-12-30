@@ -1,9 +1,10 @@
 .mainCarausal{
     width: 100%;
-    /* border-bottom: 2px solid rgb(4, 66, 235); */
-    /* display: none; */
-    /* opacity: 0.4; */
 }
 .d-block {
     display: none;
+}
+.carousel-image{
+    width: 100%;
+    height: 330px;
 }

@@ -11,6 +11,7 @@ import Register from "../COMPANY Components/Register/Register"
 import Gifts from "../gifts/media/gift";
 import Simpleorder from "../SimpleOrderForm/simpleOrderForm.jsx"
 import ApplyRegistration from "../apply for registration/apply registration";
+import Product from "../Product-page/product"
 export default function Rout() {
   return (
     <>
@@ -26,6 +27,7 @@ export default function Rout() {
           <Route path="/gifts" element={<Gifts/>} />
           <Route path="/order" element={<Simpleorder/>} />
           <Route path="/registration" element={<ApplyRegistration/>} />
+          <Route path="/selectedgift" element={<Product/>} />
           
         </Routes>
 

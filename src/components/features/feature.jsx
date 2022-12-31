@@ -4,6 +4,7 @@ import "./features.css";
 import gift from "./media/gift.png";
 import company from "./media/company.png";
 import order from "./media/order.png";
+import { height } from "@mui/system";
 export default function Features() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function Features() {
         <div className="features">
           <div className="featureOne featureBox">
             <div className="img-wrapfeatur">
-              <img src={gift} width={"70px"} alt="" className="img-class" />
+              <img src={gift} width={"70px"} height={'100%'} alt="" className="img-class" />
             </div>
             <h3>Send Gifts</h3>
             <hr className="features-hr" />
@@ -24,7 +25,7 @@ export default function Features() {
 
           <div className="featureTwo featureBox featHIghlightes">
             <div className="img-wrapfeatur">
-              <img src={company} width={"70px"} alt="" />
+              <img src={company} width={"70px"} height={'100%'} style={{marginBottom:'10px'}} alt="" />
             </div>
             <h3>Register Company</h3>
             <hr className="features-hr" />
@@ -47,6 +48,7 @@ export default function Features() {
               quia nihil?
             </p>
           </div>
+          
         </div>
       </div>
     </>

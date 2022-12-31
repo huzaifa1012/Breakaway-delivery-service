@@ -1,27 +1,30 @@
 .glimps-wrap {
   /* padding: 50px; */
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: cover;
+}
+.glimps {
+  max-width: 2060px;
   background: rgb(0, 104, 148);
   background: linear-gradient(
     90deg,
     rgb(0, 154, 219) 0%,
     rgba(0, 165, 236, 1) 100%
   );
-  background-repeat: no-repeat;
-  padding-bottom: 10px;
-  background-size: cover;
-}
-.glimps {
   color: white;
-  margin-bottom: 70px;
-  /* display: flex;
-  justify-content: space-evenly; */
+  height: auto;
+  width: 100vw;
+  
 }
 .glimp-one {
   display: flex;
   justify-content: space-evenly;
-  width: 100vw;
+  /* width: 100vw; */
   align-items: center;
-  height: auto;
+  height: 100%;
   flex-wrap: wrap-reverse;
 }
 /* ///////////////////////////////////// */
@@ -43,7 +46,6 @@
 }
 .other-glimps {
     background-color: white;
-    
     color: black;
     padding: 20px;
     border-radius: 20px;   
@@ -72,27 +74,16 @@
 }
 .other {
     background-color:#f0f0f0;
-    /* border-radius: 5px; */
-    /* width: 80%; */
     padding: 20px;
     color: #333333;
-    /* align-items: baseline; */
 }
 .right {
 width: 600px;
-  /* /* height: 100%; */
-    /* background-color: white; */
-    /* height: 200px; */
     display: flex;
-    /* justify-content: end; */
-    /* align-items: flex-end;  */
 }
 .underMaterial {
     padding: 35px 60px 34px 60px;
 }
-/* .other-img {
-    
-} */
 .other-p {
     width: 100%;
     font-size: 18px;

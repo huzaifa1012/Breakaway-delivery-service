@@ -15,6 +15,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { async } from "@firebase/util";
 import "./register.css";
+import Spacer from "../../spacer-for-header/spacer";
 
 export default function RegisterationForm() {
   useEffect(() => {
@@ -74,6 +75,8 @@ export default function RegisterationForm() {
   return (
     <>
       <Header />
+      <Spacer/>
+
       <div className="sigin-form-wrap">
         <div className="sigin-form">
           <div className="register-notes-right">

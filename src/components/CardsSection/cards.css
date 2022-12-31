@@ -1,6 +1,11 @@
+@font-face {
+    font-family: poppinsa-gift;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
 body {
     margin: 0px;
-    font-family:  Arial;
+    font-family:  poppinsa-gift;
 }
 
 .cards-wrap {

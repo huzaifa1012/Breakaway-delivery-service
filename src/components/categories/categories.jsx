@@ -1,7 +1,7 @@
 // import { render } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 import "./categories.css";
-// import "../CardsSection/cards.css";
+import "../CardsSection/cards.css";
 import { db } from "../firebaseconfig";
 import {
   collection,

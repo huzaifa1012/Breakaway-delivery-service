@@ -10,18 +10,27 @@ import {
   onSnapshot,
   orderBy,
   limit,
+  startAt,
+  startAfter,
 } from "firebase/firestore";
 
 export default function Categories() {
   const [allProduct, setAllProduct] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [paginationNumber, setPaginationNumber] = useState("");
+  const [orderingNo, setOrderingNo] = useState(1);
+  const [productLength, setProductLength] = useState(0);
 
   const allProductsData = () => {
     let collectionRef = collection(db, "allProducts");
     let ordering = orderBy("time", "asc");
-    let limiting = limit(10);
+    let limiting = limit(orderingNo);
     const q = query(collectionRef, ordering, limiting);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      setProductLength(querySnapshot.size);
+      let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+      setPaginationNumber(lastInvisible);
+      console.log(paginationNumber);
       const productData = [];
       const category = [];
       querySnapshot.forEach((doc) => {
@@ -45,6 +54,7 @@ export default function Categories() {
     let collectionQuery = where("category", "==", currentEl);
     const q = query(collectionRef, collectionQuery);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      setProductLength(querySnapshot.size);
       let setData = [];
       querySnapshot.forEach((doc) => {
         let data = doc.data();
@@ -52,6 +62,36 @@ export default function Categories() {
       });
       setAllProduct(setData);
     });
+    return () => unsubscribe();
+  };
+
+  const moveUser = (time, name) => {
+    console.log(time, name);
+  };
+
+  const showmoreProduct = () => {
+    console.log("ALLAH");
+    let collectionRef = collection(db, "allProducts");
+    let ordering = orderBy("time", "asc");
+    let limiting = limit(orderingNo);
+    let paginationQuery = startAfter(paginationNumber);
+    const q = query(collectionRef, ordering, limiting, paginationQuery);
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      setProductLength(querySnapshot.size);
+      let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+      setPaginationNumber(lastInvisible);
+      console.log(paginationNumber);
+      const productData = [];
+      const category = [];
+      querySnapshot.forEach((doc) => {
+        productData.push(doc.data());
+        category.push(doc.data().category);
+      });
+      setAllProduct(productData);
+      let getCategory = [...new Set(category)];
+      setCategories(getCategory);
+    });
+
     return () => unsubscribe();
   };
 
@@ -84,57 +124,43 @@ export default function Categories() {
           {allProduct
             ? allProduct.map((currentEl, index) => {
                 return (
-                  <div className="prod-box-wrap" key={index}>
+                  <div
+                    className="prod-box-wrap"
+                    key={index}
+                    onClick={() => {
+                      moveUser(currentEl.time, currentEl.name);
+                    }}
+                  >
                     <div className="prod-box">
                       <div className="box-img-wrap">
                         <img
                           src={currentEl.image[0]}
-                          alt=""
+                          alt="product-image"
                           className="prod-img"
                         />
                       </div>
                       <div className="box-text-wrap">
                         <h6 className="prod-title-text">{currentEl.name}</h6>
-                        <button className="buy-btn-s">Buy Now</button>
+                        <button className="buy-btn-s">Order</button>
                       </div>
                     </div>
                   </div>
                 );
               })
             : null}
-
-          {/* <div className="prod-box-wrap">
-            <div className="prod-box">
-              <div className="box-img-wrap">
-                <img
-                  src="https://cdn11.bigcommerce.com/s-mj60b85l0a/images/stencil/1280x1280/products/9415/30479/GAZ-14-LIMOUSINE-NH35-560A604-Leather-Strap-Transparent-Background-600x793__76838.1668009370.png?c=2"
-                  alt=""
-                  className="prod-img"
-                />
-              </div>
-              <div className="box-text-wrap">
-                <h6 className="prod-title-text">PRODUCT TITLE</h6>
-                <button className="buy-btn-s">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="prod-box-wrap">
-            <div className="prod-box">
-              <div className="box-img-wrap">
-                <img
-                  src="https://cdn11.bigcommerce.com/s-mj60b85l0a/images/stencil/1280x1280/products/9415/30479/GAZ-14-LIMOUSINE-NH35-560A604-Leather-Strap-Transparent-Background-600x793__76838.1668009370.png?c=2"
-                  alt=""
-                  className="prod-img"
-                />
-              </div>
-              <div className="box-text-wrap">
-                <h6 className="prod-title-text">PRODUCT TITLE</h6>
-                <button className="buy-btn-s">Buy Now</button>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
+      {productLength !== 0 ? (
+        <div className="container-fluid my-3">
+          <div className="row">
+            <div className="col text-center">
+              <button className="show-more" onClick={showmoreProduct}>
+                Show More
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }

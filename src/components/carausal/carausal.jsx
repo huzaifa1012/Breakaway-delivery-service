@@ -45,7 +45,7 @@ function Carausal() {
           ? photos.map((data, index) => {
               return (
                 <div key={index}>
-                  <div>
+                  <div className="shadow">
                     <img src={data} alt="carousel" className="carousel-image" />
                   </div>
                 </div>

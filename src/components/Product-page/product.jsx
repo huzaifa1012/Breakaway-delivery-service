@@ -1,10 +1,12 @@
 import React from "react";
 import "./the-product-style.css";
 import Header from "../navbar/navbar";
+import Spacer from "../spacer-for-header/spacer"
 export default function Product() {
   return (
     <>
       <Header />
+      <Spacer/>
       <div className="prod-wrap">
         <div className="container-prod">
           {/*   https://www.jerecho.com/codepen/nike-product-page/ */}

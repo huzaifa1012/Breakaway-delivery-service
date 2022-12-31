@@ -3,6 +3,7 @@ import RegisterationForm from "./Registeration";
 export default function Register() {
   return (
     <>
+    
       <RegisterationForm />
     </>
   );

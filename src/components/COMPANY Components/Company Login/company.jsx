@@ -12,6 +12,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import Spacer from "../../spacer-for-header/spacer";
 
 export default function Company() {
   useEffect(() => {
@@ -70,6 +71,8 @@ export default function Company() {
   return (
     <>
       <Header />
+      <Spacer/>
+
       <div className="sigin-form-wrap">
         <div className="sigin-form">
           <div className="login-notes-right">

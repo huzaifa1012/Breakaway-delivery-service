@@ -20,13 +20,17 @@ export default function Categories() {
   const [allProduct, setAllProduct] = useState([]);
   const [categories, setCategories] = useState([]);
   const [paginationNumber, setPaginationNumber] = useState("");
-  const [orderingNo, setOrderingNo] = useState(1);
+  const [orderingNo, setOrderingNo] = useState(5);
   const [productLength, setProductLength] = useState(0);
+  const [showMoreProductQuery, setShowMoreProductQuery] = useState("");
+  const [productCondtion, setProductCondtion] = useState(false);
+  const [gettingDataQueryNo, setGettingDataQueryNo] = useState(0);
 
   const allProductsData = () => {
     let collectionRef = collection(db, "allProducts");
     let ordering = orderBy("time", "asc");
     let limiting = limit(orderingNo);
+
     const q = query(collectionRef, ordering, limiting);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
@@ -44,17 +48,41 @@ export default function Categories() {
       setCategories(getCategory);
     });
 
+    // To stop realtime updates
+    return () => unsubscribe();
+  };
+
+  const getAllCategories = () => {
+    let collectionRef = collection(db, "allProducts");
+
+    const q = query(collectionRef);
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const category = [];
+      querySnapshot.forEach((doc) => {
+        category.push(doc.data().category);
+      });
+      let getCategory = [...new Set(category)];
+      setCategories(getCategory);
+    });
+
+    // To stop realtime updates
     return () => unsubscribe();
   };
 
   useEffect(() => {
     allProductsData();
+    getAllCategories();
   }, []);
 
   const iterateData = (currentEl) => {
+    setGettingDataQueryNo(1);
+    setShowMoreProductQuery(currentEl);
+
     let collectionRef = collection(db, "allProducts");
     let collectionQuery = where("category", "==", currentEl);
-    const q = query(collectionRef, collectionQuery);
+    let limitingQuery = limit(5);
+
+    const q = query(collectionRef, collectionQuery, limitingQuery);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
       let setData = [];
@@ -64,6 +92,8 @@ export default function Categories() {
       });
       setAllProduct(setData);
     });
+
+    // To stop realtime updates
     return () => unsubscribe();
   };
 
@@ -74,12 +104,19 @@ export default function Categories() {
   };
 
   const showmoreProduct = () => {
-    console.log("ALLAH");
+    console.log(showMoreProductQuery);
+
     let collectionRef = collection(db, "allProducts");
+    let collectionQuery = where("category", "==", showMoreProductQuery);
     let ordering = orderBy("time", "asc");
     let limiting = limit(orderingNo);
     let paginationQuery = startAfter(paginationNumber);
-    const q = query(collectionRef, ordering, limiting, paginationQuery);
+    const q = query(
+      collectionRef,
+      ordering,
+      limiting,
+      paginationQuery,
+    );
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
       let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];

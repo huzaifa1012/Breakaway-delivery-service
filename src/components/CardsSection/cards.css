@@ -30,6 +30,7 @@ body {
 .prod-box{
     margin: 5px;
     background-color:transparent;
+    cursor: pointer;
     /* border: 2px solid black; */
     box-shadow: 0px 2px 4px  rgba(0, 0, 0, 0.342); 
     height: 270px;

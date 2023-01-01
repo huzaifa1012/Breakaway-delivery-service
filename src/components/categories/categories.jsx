@@ -13,6 +13,8 @@ import {
   startAt,
   startAfter,
 } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+import { async } from "@firebase/util";
 
 export default function Categories() {
   const [allProduct, setAllProduct] = useState([]);
@@ -65,8 +67,10 @@ export default function Categories() {
     return () => unsubscribe();
   };
 
+  let navigate = useNavigate();
   const moveUser = (time, name) => {
     console.log(time, name);
+    navigate("/selectedgift");
   };
 
   const showmoreProduct = () => {

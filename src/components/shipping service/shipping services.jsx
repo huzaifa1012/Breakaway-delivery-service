@@ -2,6 +2,8 @@ import React from "react";
 import "./shipping services.css";
 import bikesvg from "./media/bikerider.svg";
 export default function ShippingService() {
+  
+
   return (
     <>
       <div className="shipping-service-wrap">
@@ -108,7 +110,6 @@ export default function ShippingService() {
                   <path d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3L2.95.4ZM7.5 1H3.75L1.5 4h6V1Zm1 0v3h6l-2.25-3H8.5ZM15 5H1v10h14V5Z" />
                 </svg>{" "}
                 <h5>Document & Parcel</h5>
-          
                 <ul>
                   <li>International</li>
                 </ul>
@@ -119,13 +120,6 @@ export default function ShippingService() {
           <div className="bottom-feature">
             <button className="shipping-bottom-btn">More Sevices</button>
             
-
-      <p className="codepen" data-height={300} data-default-tab="html,result" data-slug-hash="XWbWKwL" data-user="hexagoncircle" style={{height: '300px', boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em 0', padding: '1em'}}>
-        <span>See the Pen <a href="https://codepen.io/hexagoncircle/pen/XWbWKwL">
-            Card Hover Interactions</a> by Ryan Mulligan (<a href="https://codepen.io/hexagoncircle">@hexagoncircle</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    
           </div>
         </div>
       </div>

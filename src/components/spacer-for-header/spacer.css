@@ -1,6 +1,6 @@
 .spacer {
     width:100vw;
-    height:69px;
+    height:67px;
     background-color:#f0f0f0;
 }
 
@@ -10,7 +10,7 @@
 @media (min-width: 10px) and (max-width: 991px) {
     .spacer {
         width:100vw;
-        height:59px;
+        height:55px;
         background-color:red;
     }
 

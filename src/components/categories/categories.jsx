@@ -14,29 +14,33 @@ import {
   startAfter,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { async } from "@firebase/util";
 
 export default function Categories() {
   const [allProduct, setAllProduct] = useState([]);
   const [categories, setCategories] = useState([]);
   const [paginationNumber, setPaginationNumber] = useState("");
-  const [orderingNo, setOrderingNo] = useState(5);
+  const [orderingNo, setOrderingNo] = useState(4);
   const [productLength, setProductLength] = useState(0);
   const [showMoreProductQuery, setShowMoreProductQuery] = useState("");
-  const [productCondtion, setProductCondtion] = useState(false);
+  const [productCondtion, setProductCondtion] = useState(true);
   const [gettingDataQueryNo, setGettingDataQueryNo] = useState(0);
+  const [loader, setLoader] = useState(false);
+  // const [disabledBtn, setDisabledBtn] = useState(false);
 
   const allProductsData = () => {
     let collectionRef = collection(db, "allProducts");
     let ordering = orderBy("time", "asc");
     let limiting = limit(orderingNo);
-
     const q = query(collectionRef, ordering, limiting);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
+      {
+        querySnapshot.size < orderingNo
+          ? setProductCondtion(false)
+          : setProductCondtion(true);
+      }
       let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];
       setPaginationNumber(lastInvisible);
-      console.log(paginationNumber);
       const productData = [];
       const category = [];
       querySnapshot.forEach((doc) => {
@@ -80,11 +84,16 @@ export default function Categories() {
 
     let collectionRef = collection(db, "allProducts");
     let collectionQuery = where("category", "==", currentEl);
-    let limitingQuery = limit(5);
+    let limitingQuery = limit(orderingNo);
 
     const q = query(collectionRef, collectionQuery, limitingQuery);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
+      {
+        querySnapshot.size < orderingNo
+          ? setProductCondtion(false)
+          : setProductCondtion(true);
+      }
       let setData = [];
       querySnapshot.forEach((doc) => {
         let data = doc.data();
@@ -99,13 +108,37 @@ export default function Categories() {
 
   let navigate = useNavigate();
   const moveUser = (time, name) => {
-    console.log(time, name);
-    navigate("/selectedgift");
+    navigate("/selectedgift", { state: { dataTime: time ,dataName:name} });
+  };
+
+  const showmoreProduct2 = () => {
+    let collectionRef = collection(db, "allProducts");
+    let ordering = orderBy("time", "asc");
+    let limiting = limit(orderingNo);
+    let paginationQuery = startAfter(paginationNumber);
+    const q = query(collectionRef, ordering, limiting, paginationQuery);
+    setLoader(true);
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      setProductLength(querySnapshot.size);
+      {
+        querySnapshot.size < orderingNo
+          ? setProductCondtion(false)
+          : setProductCondtion(true);
+      }
+      let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+      setPaginationNumber(lastInvisible);
+      const productData = [];
+      querySnapshot.forEach((doc) => {
+        productData.push(doc.data());
+      });
+      setAllProduct(productData);
+      setLoader(false);
+    });
+
+    return () => unsubscribe();
   };
 
   const showmoreProduct = () => {
-    console.log(showMoreProductQuery);
-
     let collectionRef = collection(db, "allProducts");
     let collectionQuery = where("category", "==", showMoreProductQuery);
     let ordering = orderBy("time", "asc");
@@ -116,21 +149,24 @@ export default function Categories() {
       ordering,
       limiting,
       paginationQuery,
+      collectionQuery
     );
+    setLoader(true);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       setProductLength(querySnapshot.size);
+      {
+        querySnapshot.size < orderingNo
+          ? setProductCondtion(false)
+          : setProductCondtion(true);
+      }
       let lastInvisible = querySnapshot.docs[querySnapshot.docs.length - 1];
       setPaginationNumber(lastInvisible);
-      console.log(paginationNumber);
       const productData = [];
-      const category = [];
       querySnapshot.forEach((doc) => {
         productData.push(doc.data());
-        category.push(doc.data().category);
       });
       setAllProduct(productData);
-      let getCategory = [...new Set(category)];
-      setCategories(getCategory);
+      setLoader(false);
     });
 
     return () => unsubscribe();
@@ -191,12 +227,20 @@ export default function Categories() {
             : null}
         </div>
       </div>
-      {productLength !== 0 ? (
+
+      {productCondtion ? (
         <div className="container-fluid my-3">
           <div className="row">
             <div className="col text-center">
-              <button className="show-more" onClick={showmoreProduct}>
-                Show More
+              <button
+                className="show-more"
+                onClick={
+                  showMoreProductQuery !== ""
+                    ? showmoreProduct
+                    : showmoreProduct2
+                }
+              >
+                {loader ? <div className="spinner-border"></div> : "Show More"}
               </button>
             </div>
           </div>

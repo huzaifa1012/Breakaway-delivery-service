@@ -64,6 +64,7 @@
   color: white;
   background: linear-gradient(144deg, rgba(0,125,255,1) 0%, rgba(0,1,255,0.8519782913165266) 100%, rgba(0,78,201,0.8239670868347339) 2313%);  
   cursor: pointer;
+  transition: 0.4s;
 }
 
 

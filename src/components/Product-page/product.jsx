@@ -16,6 +16,13 @@ export default function Product() {
   const [getData, setGetData] = useState([]);
   const location = useLocation();
   const queryData = location.state;
+  const [modalName, setModalName] = useState("");
+  const [modalEmail, setModalEmail] = useState("");
+  const [modalPhone, setModalPhone] = useState("");
+  const [modalPick, setModalPick] = useState("");
+  const [modalDrop, setModalDrop] = useState("");
+  const [modalSelect, setModalSelect] = useState("");
+  const [modalAdditionalDetails, setModalAdditionalDetails] = useState("");
 
   const getSelectedData = () => {
     let collectionRef = collection(db, "allProducts");
@@ -34,6 +41,19 @@ export default function Product() {
   useEffect(() => {
     getSelectedData();
   }, []);
+
+  const saveData = () => {
+    setLgShow(false);
+    console.log(
+      modalName,
+      modalEmail,
+      modalPhone,
+      modalDrop,
+      modalPick,
+      modalSelect,
+      modalAdditionalDetails
+    );
+  };
 
   return (
     <>
@@ -58,47 +78,97 @@ export default function Product() {
               className="form-control"
               id="floatingInput"
               placeholder="name@example.com"
+              value={modalName}
+              onChange={(e) => {
+                setModalName(e.target.value);
+              }}
             />
             <label htmlFor="floatingInput">Name</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-3">
             <input
               type="email"
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
+              value={modalEmail}
+              onChange={(e) => {
+                setModalEmail(e.target.value);
+              }}
             />
             <label htmlFor="floatingPassword">Email</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-3">
             <input
-              type="email"
+              type="number"
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
+              value={modalPhone}
+              onChange={(e) => {
+                setModalPhone(e.target.value);
+              }}
             />
             <label htmlFor="floatingPassword">Phone</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-3">
             <input
-              type="email"
+              type="text"
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
+              value={modalPick}
+              onChange={(e) => {
+                setModalPick(e.target.value);
+              }}
             />
             <label htmlFor="floatingPassword">Pick</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-3">
             <input
-              type="email"
+              type="text"
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
+              value={modalDrop}
+              onChange={(e) => {
+                setModalDrop(e.target.value);
+              }}
             />
             <label htmlFor="floatingPassword">Drop</label>
           </div>
+          <select
+            className="form-select form-select-md mb-3"
+            aria-label="Default select example"
+            onChange={(e) => {
+              setModalSelect(e.target.value);
+            }}
+          >
+            <option value="Select Category">Select Category</option>
+            <option value="Normal">Normal</option>
+            <option value="Company">Company</option>
+          </select>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+              value={modalAdditionalDetails}
+              onChange={(e) => {
+                setModalAdditionalDetails(e.target.value);
+              }}
+            />
+            <label htmlFor="floatingPassword">Additional Details</label>
+          </div>
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={saveData}>
+            Save
+          </Button>
+        </Modal.Footer>
       </Modal>
+
       {getData.map((currentEl, index) => {
         return (
           <div className="prod-wrap">

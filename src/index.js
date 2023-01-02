@@ -5,8 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 // import Header from './components/navbar/navbar'; 
 import Rout from "./components/rout/rout";
 import { BrowserRouter } from "react-router-dom";
-
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

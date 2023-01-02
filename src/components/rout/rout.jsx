@@ -12,6 +12,7 @@ import Gifts from "../gifts/media/gift";
 import Simpleorder from "../SimpleOrderForm/simpleOrderForm.jsx"
 import ApplyRegistration from "../apply for registration/apply registration";
 import Product from "../Product-page/product"
+import Sad from "../sad/sad.jsx"
 export default function Rout() {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Rout() {
           <Route path="/order" element={<Simpleorder/>} />
           <Route path="/registration" element={<ApplyRegistration/>} />
           <Route path="/selectedgift" element={<Product/>} />
+          <Route path="/sad" element={<Sad/>} />
           
         </Routes>
 
